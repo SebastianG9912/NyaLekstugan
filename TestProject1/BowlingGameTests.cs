@@ -9,30 +9,36 @@ using ClassLibrary1;
 
 namespace TestProject1
 {
+    //TODO upprepning av kod i båda tester
     public class BowlingGameTests
     {
+        private Game _game;
+
+        public BowlingGameTests()
+        {
+            _game = new Game();
+        }
+
         [Fact]
         public void TestGutterGame()
         {
-            Game game = new Game();
+            MakeRolls(20, 0);
 
-            for (int i = 0; i < 20; i++)
-            {
-                game.Roll(0);
-            }
-
-            Assert.Equal(0, game.Score());
+            Assert.Equal(0, _game.Score());
         }
 
         [Fact]
         public void TestAllOnes()
         {
-            Game game = new Game();
+            MakeRolls(20, 1);
 
-            for (int i = 0; i < 20; i++)
-                game.Roll(1);
+            Assert.Equal(20, _game.Score());
+        }
 
-            Assert.Equal(20, game.Score());
+        private void MakeRolls(int rolls, int pinsHitPerRound)
+        {
+            for (int i = 0; i < rolls; i++)
+                _game.Roll(pinsHitPerRound);
         }
     }
 }
