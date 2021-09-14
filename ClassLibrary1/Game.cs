@@ -10,12 +10,12 @@ namespace ClassLibrary1
     {
         public void Roll(int pins)
         {
-
+            throw new NotImplementedException();
         }
 
         public int Score()
         {
-            return 0;
+            throw new NotImplementedException();
         }
     }
 }
