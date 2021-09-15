@@ -59,11 +59,22 @@ namespace TestProject1
         [Fact]
         public void TestOneStrike()
         {
-            _game.Roll(10); // strike
+            RollStrike();
             _game.Roll(3);
             _game.Roll(4);
             MakeRolls(16, 0);
             Assert.Equal(24, _game.Score());
+        }
+
+        private void RollStrike()
+        {
+            _game.Roll(10);
+        }
+
+        public void TestPerfectGame()
+        {
+            MakeRolls(12, 10);
+            Assert.Equal(300, _game.Score());
         }
     }
 }

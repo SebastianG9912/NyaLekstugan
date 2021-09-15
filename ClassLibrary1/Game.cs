@@ -21,19 +21,19 @@ namespace ClassLibrary1
             int frameIndex = 0;
             for (int frame = 0; frame < 10; frame++)
             {
-                if (_rolls[frameIndex] == 10) // strike
+                if (IsStrike(frameIndex)) // strike
                 {
-                    _score += 10 + _rolls[frameIndex + 1] + _rolls[frameIndex + 2];
+                    _score += 10 + StrikeBonus(frameIndex);
                     frameIndex++;
                 }
                 else if (IsSpare(frameIndex)) // spare
                 {
-                    _score += 10 + _rolls[frameIndex + 2];
+                    _score += 10 + SpareBonus(frameIndex);
                     frameIndex += 2;
                 }
                 else
                 {
-                    _score += _rolls[frameIndex] + _rolls[frameIndex + 1];
+                    _score += SumOfBallsInFrame(frameIndex);
                     frameIndex += 2;
                 }
 
@@ -41,6 +41,26 @@ namespace ClassLibrary1
 
             }
             return _score;
+        }
+
+        private Boolean IsStrike(int frameIndex)
+        {
+            return _rolls[frameIndex] == 10;
+        }
+
+        private int SumOfBallsInFrame(int frameIndex)
+        {
+            return _rolls[frameIndex] + _rolls[frameIndex + 1];
+        }
+
+        private int SpareBonus(int frameIndex)
+        {
+            return _rolls[frameIndex + 2];
+        }
+
+        private int StrikeBonus(int frameIndex)
+        {
+            return _rolls[frameIndex + 1] + _rolls[frameIndex + 2];
         }
 
         private Boolean IsSpare(int frameIndex)
