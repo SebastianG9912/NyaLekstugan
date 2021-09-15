@@ -19,7 +19,10 @@ namespace ClassLibrary1
         {
             int _score = 0;
             for (int i = 0; i < _rolls.Length; i++)
+            {
+
                 _score += _rolls[i];
+            }
             return _score;
         }
     }
