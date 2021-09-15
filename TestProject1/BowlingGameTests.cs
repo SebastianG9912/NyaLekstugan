@@ -40,5 +40,15 @@ namespace TestProject1
             for (int i = 0; i < rolls; i++)
                 _game.Roll(pinsHitPerRound);
         }
+
+        [Fact]
+        public void testOneSpare()
+        {
+            _game.Roll(5);
+            _game.Roll(5); // spare
+            _game.Roll(3);
+            MakeRolls(17,0);
+            Assert.Equal(16, _game.Score());
+        }
     }
 }
