@@ -18,10 +18,12 @@ namespace ClassLibrary1
         public int Score()
         {
             int _score = 0;
-            for (int i = 0; i < _rolls.Length; i++)
+            int i = 0;
+            for (int frame = 0; frame < 10; frame++)
             {
 
-                _score += _rolls[i];
+                _score += _rolls[i] + _rolls[i+1];
+                i += 2;
             }
             return _score;
         }
