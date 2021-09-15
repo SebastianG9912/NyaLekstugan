@@ -55,5 +55,15 @@ namespace TestProject1
             _game.Roll(5);
             _game.Roll(5);
         }
+
+        [Fact]
+        public void TestOneStrike()
+        {
+            _game.Roll(10); // strike
+            _game.Roll(3);
+            _game.Roll(4);
+            MakeRolls(16, 0);
+            Assert.Equal(24, _game.Score());
+        }
     }
 }
