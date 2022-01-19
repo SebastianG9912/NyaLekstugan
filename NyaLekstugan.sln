@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31613.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{779B5C8A-26B8-45AE-AF24-DFF2B1DC8AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{779B5C8A-26B8-45AE-AF24-DFF2B1DC8AB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{DE928B35-D976-4ED2-AF80-2592C875A189}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{DE928B35-D976-4ED2-AF80-2592C875A189}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{6E9B8780-D2A8-4966-BE31-2BD512C716F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_Lek", "JSON_Lek\JSON_Lek.csproj", "{13A509AB-7331-40FA-B25A-39EF8A67B1B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DE928B35-D976-4ED2-AF80-2592C875A189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE928B35-D976-4ED2-AF80-2592C875A189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE928B35-D976-4ED2-AF80-2592C875A189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9B8780-D2A8-4966-BE31-2BD512C716F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9B8780-D2A8-4966-BE31-2BD512C716F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9B8780-D2A8-4966-BE31-2BD512C716F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9B8780-D2A8-4966-BE31-2BD512C716F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A509AB-7331-40FA-B25A-39EF8A67B1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A509AB-7331-40FA-B25A-39EF8A67B1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A509AB-7331-40FA-B25A-39EF8A67B1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A509AB-7331-40FA-B25A-39EF8A67B1B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
